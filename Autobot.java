@@ -1,3 +1,2 @@
-public class Autobot{ //Raza
-    String mundOrigen = "Cybertron";//
+public class Autobot extends Transformer{ //Raza
 }
