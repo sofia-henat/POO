@@ -1,3 +1,2 @@
-public class Predacon{ //Raza
-    String mundOrigen = "Cybertron";//
+public class Predacon extends Transformer{ //Raza
 }
