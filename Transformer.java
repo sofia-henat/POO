@@ -7,10 +7,6 @@ abstract class Transformer{
     int golpeAlto = 2; //Golpe alto
     int patada = 3; //Patada
 
-    public class Predacon{
-        
-    }
-
     //Faltan los ataques especiales
     abstract void ataquesEspeciales();
 }
