@@ -1,3 +1,4 @@
 abstract class Armas{
   static String arma;
+  int usos;
 }
