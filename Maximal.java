@@ -7,5 +7,8 @@ public class Maximal extends Transformer{
     void ataquesEspeciales(){
     }
 
-    public Maximal(){} //Metodo constructor de la clase hija
+    public Maximal(){ //Metodo constructor de la clase hija
+        this.resistencia = 1400; //Se inicializa la resistencia
+        this.nombre = "Optimus primal";
+    } 
 }
