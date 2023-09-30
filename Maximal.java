@@ -1,3 +1,2 @@
-public class Maximal{ //Raza
-    String mundOrigen = "Cybertron";//
+public class Maximal extends Transformer{
 }
