@@ -1,3 +1,2 @@
-public class Decepticon{ //Raza
-    String mundOrigen = "Cybertron";//
+public class Decepticon extends Transformer{ //Raza
 }
