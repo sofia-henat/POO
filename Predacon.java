@@ -1,8 +1,8 @@
-public class Predacon extends Transformer{ //Raza
+public class Predacon extends Transformer implements Predaconi{ //Raza
     int Taladro = 6; //Unidades de ataque
 
     @Override
-    void ataquesEspeciales() {  
+    public void ataquesEspeciales(){  
     }
 
     public Predacon(){ //Metodo constructor de la clase hija
