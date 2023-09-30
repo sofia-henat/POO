@@ -6,5 +6,8 @@ public class Decepticon extends Transformer{ //Raza
     void ataquesEspeciales(){        
     }
     
-    public Decepticon(){} //Metodo constructor de la clase hija
+    public Decepticon(){ //Metodo constructor de la clase hija
+        this.resistencia = 1200; //Se inicializa la resistencia
+        this.nombre = "Megatron";
+    } 
 }
