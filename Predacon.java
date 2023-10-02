@@ -1,5 +1,4 @@
 public class Predacon extends Transformer implements Predaconi{ //Raza
-    int Taladro = 6; //Unidades de ataque
 
     @Override
     public int ataquesEspeciales(){
@@ -9,7 +8,9 @@ public class Predacon extends Transformer implements Predaconi{ //Raza
     }
 
     public Predacon(){ //Metodo constructor de la clase hija
-        this.resistencia = 1000; //Se inicializa la resistencia
+        setResistencia(1000); //Se inicializa la resistencia
         this.nombre = "Razorclaw";
+        //Se escoge un arma en base a su raza
+        Arma arma = new Armas(nombre);
     } 
 }
