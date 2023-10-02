@@ -4,13 +4,21 @@ public class Batalla{
     public static void main(String[] args){
 
         //Se crean los transformers que iran en ambos bandos
+        System.out.println("||||| Autobot bando 1 |||||");
         Autobot a1 = new Autobot();
+        System.out.println("||||| Autobot bando 2 |||||");
         Autobot a2 = new Autobot();
+        System.out.println("||||| Decepticon bando 1 |||||");
         Decepticon d1 = new Decepticon();
+        System.out.println("||||| Decepticon bando 2 |||||");
         Decepticon d2 = new Decepticon();
+        System.out.println("||||| Maximal bando 1 |||||");
         Maximal m1 = new Maximal();
+        System.out.println("||||| Maximal bando 2 |||||");
         Maximal m2 = new Maximal();
+        System.out.println("||||| Predacon bando 1 |||||");
         Predacon p1 = new Predacon(); 
+        System.out.println("||||| Predacon bando 2 |||||");
         Predacon p2 = new Predacon(); 
 
         //Los Array List nos serviran para guardar los objetos de tipo Transformer en cada uno de los bandos
@@ -25,20 +33,6 @@ public class Batalla{
         Bando2.add(d2);
         Bando2.add(m2);
         Bando2.add(p2);
-
-        /* 
-
-        Armas a = new Armas();
-        String R1 = "Optimus Prime";
-        String R2 = "Megatron";
-        String R3 = "Optimus Primal";
-        String R4 = "Optimus Prime";
-        
-        a.Tipo();
-        String armamento = a.Armamento(R3);
-        int usos = a.Usos(armamento);
-        System.out.println("El tranformer " + R3 + " esta equipado con el arma " + armamento + " y le quedan " + usos + " usos");
-        */
         
     }
 }
