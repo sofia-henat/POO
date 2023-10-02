@@ -1,7 +1,4 @@
 public class Maximal extends Transformer{
-    
-    int ArcoFlechas = 5; //Unidades de ataque
-    int BlasterIones = 8; //Unidades de ataque
 
     @Override
     public int ataquesEspeciales(){
@@ -11,7 +8,9 @@ public class Maximal extends Transformer{
     }
 
     public Maximal(){ //Metodo constructor de la clase hija
-        this.resistencia = 1400; //Se inicializa la resistencia
+        setResistencia(1400); //Se inicializa la resistencia
         this.nombre = "Optimus primal";
+        //Se escoge un arma en base a su raza
+        Arma arma = new Armas(nombre);
     } 
 }
