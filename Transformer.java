@@ -7,6 +7,6 @@ abstract class Transformer{
     int golpeAlto = 2; //Golpe alto
     int patada = 3; //Patada
 
-    //Faltan los ataques especiales
-    abstract void ataquesEspeciales();
+    //Metodo del combo de ataques basicos
+    abstract int ataquesEspeciales();
 }
