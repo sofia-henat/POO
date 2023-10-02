@@ -32,7 +32,7 @@ abstract class Transformer{
                 }
             }
             else if(numeroRandom > 60 && numeroRandom < 96){
-                dano = arma.usos;
+                dano = arma.dano;
             }
             else{
                 dano = ataquesEspeciales();
