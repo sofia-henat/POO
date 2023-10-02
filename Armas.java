@@ -5,6 +5,7 @@ abstract class Arma{
     static String armamento;
     static String tipo;
     static int usos;
+    static int dano;
 }
 
 public class Armas extends Arma{
@@ -66,7 +67,7 @@ public class Armas extends Arma{
         }
     }
 
-    public int Usos(){
+    public void Usos(){
         if (armamento == "Canon de fusion"){
             usos = 6;
         } else if (armamento == "Espada megatron"){
@@ -84,12 +85,22 @@ public class Armas extends Arma{
         } else {
             usos = 10000;
         }
-        return usos;
+    }
+
+    public void dano(){
+        Random r = new Random();
+        if(tipo.equals("Ofensiva")){
+            this.dano = r.nextInt(300)+1;
+        }
+        else{
+            this.dano = 0;
+        }
     }
 
     public Armas(String nombre){ //Metodo constructor de Armas, se le asigna un tipo, un armamento y un uso
         Tipo();
         Armamento(nombre);
         Usos();
+        dano();
     }
 }
