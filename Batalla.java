@@ -26,5 +26,16 @@ public class Batalla{
         Bando2.add(m2);
         Bando2.add(p2);
 
+        Armas a = new Armas();
+        String R1 = "Optimus Prime";
+        String R2 = "Megatron";
+        String R3 = "Optimus Primal";
+        String R4 = "Optimus Prime";
+        
+        a.Tipo();
+        String armamento = a.Armamento(R3);
+        int usos = a.Usos(armamento);
+        System.out.println("El tranformer " + R3 + " esta equipado con el arma " + armamento + " y le quedan " + usos + " usos");
+
     }
 }
