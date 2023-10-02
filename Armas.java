@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Random;
+
 abstract class Arma{
     static String armamento;
     static String tipo;
@@ -7,7 +9,7 @@ abstract class Arma{
 
 public class Armas extends Arma{
     
-    public String Tipo(){
+    public void Tipo(){
         Scanner s = new Scanner (System.in);
         System.out.println("Que tipo de arma quieres?");
         System.out.println("1) Ofensiva \t 2) Defensiva");
@@ -17,13 +19,12 @@ public class Armas extends Arma{
         } else {
             tipo = "Defensiva";
         }
-        return tipo;
     }
 
-    public String Armamento(String T){
+    public void Armamento(String nombre){ //Se le manda el nombre del transformer
         Scanner s2 = new Scanner (System.in);
         System.out.println("Que arma quieres?");
-        if (tipo == "Ofensiva" && T == "Megatron"){
+        if (tipo == "Ofensiva" && nombre == "Megatron"){
             System.out.println("1)Canon de fusion (6 unidades de uso)");
             System.out.println("2)Espada megatron (6 unidades de uso)");
             int a = s2.nextInt();
@@ -32,7 +33,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Espada megatron";
             }
-        } else if (tipo == "Ofensiva" && T == "Optimus Prime"){
+        } else if (tipo == "Ofensiva" && nombre == "Optimus Prime"){
             System.out.println("1)Espada de los prime (8 unidades de uso)");
             System.out.println("2)Hacha Energón (10 unidades de uso)");
             int a = s2.nextInt();
@@ -41,7 +42,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Hacha Energón";
             }
-        } else if (tipo == "Ofensiva" && T == "Optimus Primal"){
+        } else if (tipo == "Ofensiva" && nombre == "Optimus Primal"){
             System.out.println("1)Arco de flechas (5 unidades de uso)");
             System.out.println("2)Blaster de iones (8 unidades de uso)");
             int a = s2.nextInt();
@@ -50,7 +51,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Blaster de iones";
             }
-        } else if (tipo == "Ofensiva" && T == "Razorclaw"){
+        } else if (tipo == "Ofensiva" && nombre == "Razorclaw"){
             System.out.println("1)Taladro cybertroniano (5 unidades de uso)");
             armamento = "Taladro cybertroniano";
         } else {
@@ -63,27 +64,32 @@ public class Armas extends Arma{
                 armamento = "Dron-T";
             }
         }
-        return armamento;
     }
 
-    public int Usos(String A){
-        if (A == "Canon de fusion"){
+    public int Usos(){
+        if (armamento == "Canon de fusion"){
             usos = 6;
-        } else if (A == "Espada megatron"){
+        } else if (armamento == "Espada megatron"){
             usos = 6;
-        } else if (A == "Espada de los prime"){
+        } else if (armamento == "Espada de los prime"){
             usos = 8;
-        } else if (A == "Hacha Energón"){
+        } else if (armamento == "Hacha Energón"){
             usos = 10;
-        } else if (A == "Arco de flechas"){
+        } else if (armamento == "Arco de flechas"){
             usos = 5;
-        } else if (A == "Blaster de iones"){
+        } else if (armamento == "Blaster de iones"){
             usos = 8;
-        } else if (A == "Taladro cybertroniano"){
+        } else if (armamento == "Taladro cybertroniano"){
             usos = 5;
         } else {
             usos = 10000;
         }
         return usos;
+    }
+
+    public Armas(String nombre){ //Metodo constructor de Armas, se le asigna un tipo, un armamento y un uso
+        Tipo();
+        Armamento(nombre);
+        Usos();
     }
 }
