@@ -1,10 +1,11 @@
-import java.util.Random;
+import java.util.Random; 
 import java.util.Scanner;
 
 abstract class Transformer{
     final String mundOrigen = "Cybertron";//Mundo de origen
     public String nombre; //Nombre
-    private int resistencia; //Resistencia
+    int resistenciaInicial; //Resistencia
+    private int resistencia;
     Armas arma; //Composicion
 
     //////////Ataques Basicos////////
@@ -67,6 +68,20 @@ abstract class Transformer{
         else{ //Si no hay armas de defensa
             resistencia = danoinflingido;
         }
+    }
+
+    public int matrizLiderazgo(){
+        Scanner s = new Scanner(System.in);
+        int dano;
+        System.out.println("¿Quieres usar la matriz de liderazgo?\n1)Si 2)No");
+        int opcion = s.nextInt();
+
+        if (opcion == 1){
+            setResistencia(this.resistenciaInicial); //Se regenera su resistencia
+            dano = 2 * Ofensa(); //Doble de daño
+        }
+        dano = Ofensa();
+        return dano;
     }
 
     //Getters and setters de la variable privada resistencia
