@@ -1,4 +1,4 @@
-public class Autobot extends Transformer{ //Raza
+public class Autobot extends Transformer{ //Raza//
     
     @Override
     public int ataquesEspeciales(){
@@ -13,4 +13,12 @@ public class Autobot extends Transformer{ //Raza
         //Se escoge un arma en base a su raza
         Arma arma = new Armas(nombre);
     } 
+
+    public Autobot(String Lider){
+        setResistencia(1200); //Se inicializa la resistencia
+        resistenciaInicial = 1200;//Se guarda la resistencia inicial
+        this.nombre = "Optimus Prime Lider";
+        //Se escoge un arma en base a su raza
+        Arma arma = new Armas(nombre);
+    }
 }
