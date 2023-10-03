@@ -22,7 +22,7 @@ public class Armas extends Arma{
         }
     }
 
-    public void Armamento(String raza){ //Se le manda el nombre del transformer
+    public void Armamento(String raza){ //Se le manda la raza del transformer
         Scanner s2 = new Scanner (System.in);
         System.out.println("Que arma quieres?");
         if (tipo == "Ofensiva" && raza == "Decepticon"){
