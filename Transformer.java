@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 abstract class Transformer{
     final String mundOrigen = "Cybertron";//Mundo de origen
-    String raza;
+    public String raza;
     public String nombre; //Nombre
     int resistenciaInicial; //Resistencia
     private int resistencia;
