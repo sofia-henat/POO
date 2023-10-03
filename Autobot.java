@@ -9,16 +9,18 @@ public class Autobot extends Transformer{ //Raza//
 
     public Autobot(){ //Metodo constructor de la clase hija
         setResistencia(1200); //Se inicializa la resistencia
+        this.raza = "Autobot";
         this.nombre = "Optimus Prime";
         //Se escoge un arma en base a su raza
-        Arma arma = new Armas(nombre);
+        Arma arma = new Armas(this.raza);
     } 
 
     public Autobot(String Lider){
         setResistencia(1200); //Se inicializa la resistencia
         resistenciaInicial = 1200;//Se guarda la resistencia inicial
+        this.raza = "Autobot";
         this.nombre = "Optimus Prime Lider";
         //Se escoge un arma en base a su raza
-        Arma arma = new Armas(nombre);
+        Arma arma = new Armas(this.raza);
     }
 }
