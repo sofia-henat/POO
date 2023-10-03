@@ -25,7 +25,7 @@ public class Armas extends Arma{
     public void Armamento(String raza){ //Se le manda la raza del transformer
         Scanner s2 = new Scanner (System.in);
         System.out.println("Que arma quieres?");
-        if (tipo == "Ofensiva" && raza == "Decepticon"){
+        if (this.tipo == "Ofensiva" && raza.equals("Decepticon")){
             System.out.println("1)Canon de fusion (6 unidades de uso)");
             System.out.println("2)Espada megatron (6 unidades de uso)");
             int a = s2.nextInt();
@@ -34,7 +34,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Espada megatron";
             }
-        } else if (tipo == "Ofensiva" && raza == "Autobot"){
+        } else if (this.tipo == "Ofensiva" && raza.equals("Autobot")){
             System.out.println("1)Espada de los prime (8 unidades de uso)");
             System.out.println("2)Hacha Energón (10 unidades de uso)");
             int a = s2.nextInt();
@@ -43,7 +43,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Hacha Energón";
             }
-        } else if (tipo == "Ofensiva" && raza == "Maximal"){
+        } else if (this.tipo == "Ofensiva" && raza.equals("Maximal")){
             System.out.println("1)Arco de flechas (5 unidades de uso)");
             System.out.println("2)Blaster de iones (8 unidades de uso)");
             int a = s2.nextInt();
@@ -52,7 +52,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Blaster de iones";
             }
-        } else if (tipo == "Ofensiva" && raza == "Predacon"){
+        } else if (this.tipo == "Ofensiva" && raza.equals("Predacon")){
             System.out.println("1)Taladro cybertroniano (5 unidades de uso)");
             armamento = "Taladro cybertroniano";
         } else {
@@ -101,9 +101,9 @@ public class Armas extends Arma{
       this.usos = this.usos - 1;
     }
 
-    public Armas(String nombre){ //Metodo constructor de Armas, se le asigna un tipo, un armamento y un uso
+    public Armas(String raza){ //Metodo constructor de Armas, se le asigna un tipo, un armamento y un uso
         Tipo();
-        Armamento(nombre);
+        Armamento(raza);
         Usos();
         dano();
     }
