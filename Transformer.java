@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 abstract class Transformer{
     final String mundOrigen = "Cybertron";//Mundo de origen
+    String raza;
     public String nombre; //Nombre
     int resistenciaInicial; //Resistencia
     private int resistencia;
-    Armas arma; //Composicion
+    Armas arma;//Composicion
 
     //////////Ataques Basicos////////
     int golpeAlto = 2; //Golpe alto
