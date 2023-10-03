@@ -22,10 +22,10 @@ public class Armas extends Arma{
         }
     }
 
-    public void Armamento(String nombre){ //Se le manda el nombre del transformer
+    public void Armamento(String raza){ //Se le manda el nombre del transformer
         Scanner s2 = new Scanner (System.in);
         System.out.println("Que arma quieres?");
-        if (tipo == "Ofensiva" && nombre == "Megatron"){
+        if (tipo == "Ofensiva" && raza == "Decepticon"){
             System.out.println("1)Canon de fusion (6 unidades de uso)");
             System.out.println("2)Espada megatron (6 unidades de uso)");
             int a = s2.nextInt();
@@ -34,7 +34,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Espada megatron";
             }
-        } else if (tipo == "Ofensiva" && nombre == "Optimus Prime"){
+        } else if (tipo == "Ofensiva" && raza == "Autobot"){
             System.out.println("1)Espada de los prime (8 unidades de uso)");
             System.out.println("2)Hacha Energón (10 unidades de uso)");
             int a = s2.nextInt();
@@ -43,7 +43,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Hacha Energón";
             }
-        } else if (tipo == "Ofensiva" && nombre == "Optimus Primal"){
+        } else if (tipo == "Ofensiva" && raza == "Maximal"){
             System.out.println("1)Arco de flechas (5 unidades de uso)");
             System.out.println("2)Blaster de iones (8 unidades de uso)");
             int a = s2.nextInt();
@@ -52,7 +52,7 @@ public class Armas extends Arma{
             } else {
                 armamento = "Blaster de iones";
             }
-        } else if (tipo == "Ofensiva" && nombre == "Razorclaw"){
+        } else if (tipo == "Ofensiva" && raza == "Predacon"){
             System.out.println("1)Taladro cybertroniano (5 unidades de uso)");
             armamento = "Taladro cybertroniano";
         } else {
