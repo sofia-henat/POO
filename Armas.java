@@ -97,6 +97,11 @@ public class Armas extends Arma{
         }
     }
 
+    public int MenosUsos(int a){
+        usos = a - 1;
+        return usos;
+    }
+    
     public Armas(String nombre){ //Metodo constructor de Armas, se le asigna un tipo, un armamento y un uso
         Tipo();
         Armamento(nombre);
