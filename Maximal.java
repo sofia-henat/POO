@@ -10,16 +10,18 @@ public class Maximal extends Transformer{
     public Maximal(){ //Metodo constructor de la clase hija
         setResistencia(1400); //Se inicializa la resistencia
         resistenciaInicial = 1400;
+        this.raza = "Maximal";
         this.nombre = "Optimus primal";
         //Se escoge un arma en base a su raza
-        Arma arma = new Armas(nombre);
+        Arma arma = new Armas(this.raza);
     } 
 
     public Maximal(String Lider){
         setResistencia(1400); //Se inicializa la resistencia
         resistenciaInicial = 1400;//Se guarda la resistencia inicial
+        this.raza = "Maximal";
         this.nombre = "Optimus Primal Lider";
         //Se escoge un arma en base a su raza
-        Arma arma = new Armas(nombre);
+        Arma arma = new Armas(this.raza);
     }
 }
