@@ -9,8 +9,17 @@ public class Predacon extends Transformer implements Predaconi{ //Raza
 
     public Predacon(){ //Metodo constructor de la clase hija
         setResistencia(1000); //Se inicializa la resistencia
+        resistenciaInicial = 1000;
         this.nombre = "Razorclaw";
         //Se escoge un arma en base a su raza
         Arma arma = new Armas(nombre);
     } 
+
+    public Predacon(String Lider){
+        setResistencia(1000); //Se inicializa la resistencia
+        resistenciaInicial = 1000;//Se guarda la resistencia inicial
+        this.nombre = "Razorclaw Lider";
+        //Se escoge un arma en base a su raza
+        Arma arma = new Armas(nombre);
+    }
 }
